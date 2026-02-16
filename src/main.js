@@ -30,12 +30,10 @@ function handleImageSearch(event) {
     .then(data => {
       if (data.hits.length === 0) {
         iziToast.error({
-          message:
+           title: 'Error',
+            message:
             'Sorry, there are no images matching your search query. Please, try again!',
           position: 'topRight',
-          iconUrl: iconError,
-          messageSize: '16',
-          maxWidth: 432,
           pauseOnHover: true,
         });
         return;
